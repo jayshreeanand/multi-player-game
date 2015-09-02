@@ -4,6 +4,7 @@
     <title>Multi player game</title>
   </head>
   <body>
+    <div id="output"></div>
     <form action="play">
       <input id="player_name" autocomplete="off" placeholder="nick name" /><button>Play</button>
     </form>
@@ -15,6 +16,9 @@
         socket.emit('play', $('#player_name').val());
         $('#player_name').val('');
         return false;
+      });
+      socket.on('new player', function(player_name){
+        $('#output').append($('<p>').text('New player joined:  ' + player_name));
       });
     </script>
   </body>

@@ -17,5 +17,6 @@ io.on('connection', function(socket){
   });
   socket.on('play', function(player_name){
     console.log('player name: ' + player_name);
+    io.emit('new player', player_name);
   });
 });
