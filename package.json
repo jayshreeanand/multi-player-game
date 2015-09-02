@@ -1,0 +1,8 @@
+{
+  "name": "multi-player-game",
+  "version": "0.0.1",
+  "description": "learning to build multi player games",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
