@@ -5,11 +5,17 @@
   </head>
   <body>
     <form action="play">
-      <button>Play</button>
+      <input id="player_name" autocomplete="off" placeholder="nick name" /><button>Play</button>
     </form>
-    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
       var socket = io();
+      $('form').submit(function(){
+        socket.emit('play', $('#player_name').val());
+        $('#player_name').val('');
+        return false;
+      });
     </script>
   </body>
 </html>

@@ -15,4 +15,7 @@ io.on('connection', function(socket){
   socket.on('disconnect', function(){
     console.log('user disconnected');
   });
+  socket.on('play', function(player_name){
+    console.log('player name: ' + player_name);
+  });
 });
