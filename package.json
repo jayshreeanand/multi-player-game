@@ -4,6 +4,7 @@
   "description": "learning to build multi player games",
   "dependencies": {
     "express": "^4.13.3",
+    "phaser": "^2.4.3",
     "socket.io": "^1.3.6"
   }
 }
